@@ -7,7 +7,11 @@ ARG username
 
 # Install required packages for building Tinker Board 2 Android
 RUN apt-get update
-RUN apt-get install -y git git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip python bc liblz4-tool m4 python-crypto xz-utils kmod bison flex python3-dev fontconfig libssl-dev parted gawk cpio rsync
+RUN apt-get install -y git git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip python3 bc liblz4-tool m4  xz-utils kmod bison flex python3-dev fontconfig libssl-dev parted gawk cpio rsync
+
+# Substitute python-crypto
+RUN apt-get install -y pip
+RUN pip install pycrypto
 
 RUN apt-get update
 RUN apt-get install -y dosfstools wget sudo
