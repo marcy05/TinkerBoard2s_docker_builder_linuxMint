@@ -26,6 +26,8 @@ RUN apt-get install -y gcc
 RUN apt-get install -y pip
 RUN pip install pycrypto
 
+RUN apt-get install vim
+
 RUN apt-get update
 RUN apt-get install -y dosfstools wget sudo
 
