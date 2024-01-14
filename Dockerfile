@@ -25,6 +25,8 @@ RUN apt-get install -y udev
 
 RUN apt-get install -y openjdk-8-jdk
 
+RUN apt-get install -y vim
+
 RUN groupadd -g $groupid $username && \
     useradd -m -u $userid -g $groupid $username && \
     echo "$username ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
