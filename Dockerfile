@@ -13,6 +13,9 @@ RUN apt-get install -y git git-core gnupg flex bison gperf build-essential zip c
 RUN apt-get install -y pip
 RUN pip install pycrypto
 
+# Set alias for python3
+RUN apt-get install -y python-is-python3
+
 RUN apt-get update
 RUN apt-get install -y dosfstools wget sudo
 
