@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG userid
@@ -7,42 +7,7 @@ ARG username
 
 # Install required packages for building Tinker Board 2 Android
 RUN apt-get update
-RUN apt-get install -y git
-RUN apt-get install -y git-core
-RUN apt-get install -y gnupg
-RUN apt-get install -y flex
-RUN apt-get install -y bison
-RUN apt-get install -y gperf
-RUN apt-get install -y build-essential
-RUN apt-get install -y zip
-RUN apt-get install -y curl
-RUN apt-get install -y zlib1g-dev
-RUN apt-get install -y gcc-multilib
-RUN apt-get install -y g++-multilib
-RUN apt-get install -y libc6-dev-i386
-RUN apt-get install -y lib32ncurses5-dev
-RUN apt-get install -y x11proto-core-dev
-RUN apt-get install -y libx11-dev lib32z-dev
-RUN apt-get install -y libgl1-mesa-dev
-RUN apt-get install -y libxml2-utils
-RUN apt-get install -y xsltproc
-RUN apt-get install -y unzip
-RUN apt-get install -y python
-RUN apt-get install -y bc
-RUN apt-get install -y liblz4-tool
-RUN apt-get install -y m4
-RUN apt-get install -y python-crypto
-RUN apt-get install -y xz-utils
-RUN apt-get install -y kmod
-RUN apt-get install -y bison
-RUN apt-get install -y flex
-RUN apt-get install -y python3-dev
-RUN apt-get install -y fontconfig
-RUN apt-get install -y libssl-dev
-RUN apt-get install -y parted
-RUN apt-get install -y gawk
-RUN apt-get install -y cpio
-RUN apt-get install -y rsync
+RUN apt-get install -yzz git git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip python bc liblz4-tool m4 python-crypto xz-utils kmod bison flex python3-dev fontconfig libssl-dev parted gawk cpio rsync
 
 RUN apt-get update
 RUN apt-get install -y dosfstools wget sudo
